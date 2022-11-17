@@ -1,0 +1,8 @@
+^rcrispr\.Rproj$
+^\.Rproj\.user$
+^\.github$
+^README\.Rmd$
+^.covrignore
+^\.circleci$
+^Dockerfile
+.licenserc.yaml

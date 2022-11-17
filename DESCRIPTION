@@ -1,0 +1,16 @@
+Package: CMScallerWrapper
+Title: R Functions for CMScaller Analyses
+Version: 1.0.0.0
+Authors@R: person(given = "Shriram", family = "Bhosle", role = c("aut", "cre"), email = "sb43@sanger.ac.uk")
+Description: A collection of R functions to assist with common CMScaller related analyses.
+License: file LICENSE
+Imports:  methods,
+          optparse,
+          dplyr,
+          survival
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Config/testthat/edition: 3
+VignetteBuilder: knitr
