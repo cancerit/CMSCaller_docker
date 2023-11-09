@@ -43,8 +43,7 @@ WORKDIR $BUILD
 ENV INST_NCPU=$(nproc)
 
 # hadolint ignore=DL3059
-RUN R -e "install.packages('pkgdown', dependencies = TRUE, lib = Sys.getenv(\"R_LIBS_USER\"), Ncpus = Sys.getenv(\"INST_NCPU\"))"
-RUN R -e "install.packages(c('remotes','BiocManager'), dependencies = TRUE, lib = Sys.getenv(\"R_LIBS_USER\"), Ncpus = Sys.getenv(\"INST_NCPU\"))"
+RUN R -e "install.packages(c('remotes','BiocManager','pheatmap','knitr','ggplot2'),  dependencies = TRUE, lib = Sys.getenv(\"R_LIBS_USER\"), Ncpus = Sys.getenv(\"INST_NCPU\"))"
 # hadolint ignore=DL3059
 RUN R -e "install.packages('https://cran.r-project.org/src/contrib/Archive/randomForest/randomForest_4.6-14.tar.gz', repos=NULL, type='source', lib = Sys.getenv(\"R_LIBS_USER\"), threads = Sys.getenv(\"INST_NCPU\"))"
 RUN R -e "BiocManager::install(c('Biobase', 'limma','DNAcopy','pROC','PRROC','graphics'), lib = Sys.getenv(\"R_LIBS_USER\"), threads = Sys.getenv(\"INST_NCPU\"))"
