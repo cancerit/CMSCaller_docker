@@ -55,6 +55,8 @@ RUN apt-get update && \
   git \
   wget \
   gfortran \
+  texinfo \
+  texlive \
   unattended-upgrades && \
   unattended-upgrade -d -v && \
   apt-get remove -yq unattended-upgrades && \
