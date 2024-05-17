@@ -14,7 +14,8 @@ if [[ -z "${TMPDIR}" ]]; then
 
   # io_lib to run the carm_filter
   cd $TMPDIR/downloads
-  wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  #wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  curl -L -o install-tl-unx.tar.gz https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   tar -xvf install-tl-unx.tar.gz
   cd install-tl-2*
   perl ./install-tl --no-interaction -scheme basic

@@ -57,6 +57,7 @@ RUN apt-get update && \
   gfortran \
   texinfo \
   texlive \
+  texlive-latex-extra --no-install-recommends \
   unattended-upgrades && \
   unattended-upgrade -d -v && \
   apt-get remove -yq unattended-upgrades && \
